@@ -4,104 +4,116 @@ description: meet ada
 tableOfContents:
     minHeadingLevel: 2
     maxHeadingLevel: 5
-    attrs:
-        title: string
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 import { Aside } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
 
 
-{/* add vfx description */}
-Moving lines that cross over one another in two colors, in the shape of any 3d object with exposed variables to add a signed distance field file of 3d object and line speed. Inspired by Augusta Ada King, the first programer.
+{/* vfx description */}
+Inspired by Augusta Ada King, the first programer. Moving lines that cross over one another in two colors, in the shape of any 3d object. Visual Effects Graph has exposed variables to add a signed distance field file of 3d object and an exposed variable to edit line speed.
 
-{/* add image of vfx */}
+{/* vfx image */}
 <Card title="ADA">
-<img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1715843837/soggyinkgames-ada.png" alt="" align="left" width="100%" height="100"/>
+  <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1715843837/soggyinkgames-ada.png" alt="" align="left" width="100%" height="100"/>
 </Card>
 
+{/*inventor image*/}
 <CardGrid>
-    <Card title="Exposed variables" icon="star">
-        ##### signed distance field: 
-        change the 3d object the wires cross over (here its a sofa chair)
-        ##### line speed: 
-        change the the speed of the wires which when slowed down turn from strings to dots
+    <Card title="Inspired by" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1716868921/Ada_portrait.jpg" alt="" align="left" width="100%" height="100"/>
     </Card>
-{/* add story and name association to inventor */}
+
+{/* inventor story*/}
     <Card title="Ada" icon="rocket">
     Augusta Ada King, Countess of Lovelace was an English mathematician and writer, chiefly known for her work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine.
     >the first programer
     </Card>
 </CardGrid>
 
-{/* add  prefab instructions */}
+{/* folder structure*/}
+#### file tree 
+
+<FileTree>
+
+- Documentation/
+- Editor/
+- Runtime
+  - VisualEffects
+    - ADA               .meta files not shown in documentation 
+      - **ADA.vfx**
+      - ADA.prefab
+      - ADAchairSDF.asset signed distance field example
+    - …
+  - …
+- Samples~/
+- package.json
+- CHANGELOG.md
+- LICENCE.md
+- README.md
+
+</FileTree>
+
+{/* prefab instructions */}
+<Aside type="note"> 
+  Make sure to take a copy of all files in the ADA folder, prefab is pointing to both files within the folder and `.vfx` file is pointing to the signed distance field `.asset`  within folder.
+</Aside>
+
 
 {/* add video or gif of vfx */}
 
-{/* add image of visual effect graph for each particle/group */}
+{/* image preview of visual effect graph */}
+#### visual graph preview
 ![An illustration of planets and stars featuring the word “astro”](https://res.cloudinary.com/soggy-ink-games/image/upload/v1715845394/soggyinkgames-ada-visualgraph.png)
 
-{/* add table of associated components such as, assembly references, png's, exposed variables, scripts, shader graphs, shaders */}
-
+{/* table of associated components such as, assembly references, png's, exposed variables, scripts, shader graphs, shaders */}
+#### exposed variables
     <div class="overflow-x-auto">
       <table class="w-full text-sm text-left text-gray-500">
           <thead class="text-xs text-gray-700 uppercase bg-gray-300">
-              <tr>
+              <tr class="bg-white border-b">
                   <th scope="col" class="px-6 py-3">
                       Name
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Email
+                      Description
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Phone
+                      Type
                   </th>
                   <th scope="col" class="px-6 py-3">
-                      Date
+                      User controlled
                   </th>
               </tr>
           </thead>
           <tbody>
-              <tr class="bg-white border-b">
+              <tr >
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Rajah Armstrong
+                    line speed
                   </th>
                   <td class="px-6 py-4">
-                    rajah.armstrong@yahoo.com
+                    changes speed of lines, when slowed down the lines turn into dots moving in a line
                   </td>
                   <td class="px-6 py-4">
-                    1-636-140-1210
+                    range
                   </td>
                   <td class="px-6 py-4">
-                    Feb 26, 2022
+                    no
                   </td>
               </tr>
-              <tr class="bg-white border-b">
+              <tr >
                   <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Ira Parker
+                    3d object
                   </th>
                   <td class="px-6 py-4">
-                    parker58@gmail.com
+                    change the 3d object the wires cross over (here its a sofa chair)
                   </td>
                   <td class="px-6 py-4">
-                    1-636-140-1110
+                    signed distance field
                   </td>
                   <td class="px-6 py-4">
-                    Mar 15, 2022
-                  </td>
-              </tr>
-              <tr class="bg-white">
-                  <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                    Nathan Bernard
-                  </th>
-                  <td class="px-6 py-4">
-                    nathan.ber47@yourmail.com
-                  </td>
-                  <td class="px-6 py-4">
-                    1-636-841-6210
-                  </td>
-                  <td class="px-6 py-4">
-                    Dec 25, 2022
+                    no
                   </td>
               </tr>
           </tbody>
@@ -109,6 +121,4 @@ Moving lines that cross over one another in two colors, in the shape of any 3d o
     </div>
 
 {/* add tags */}
-<Aside type="note" text="lalal"> 
-    <link type="">SDF, signed distance field, wires, crossing cables </link>
-</Aside>
+
