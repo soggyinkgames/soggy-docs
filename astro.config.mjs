@@ -69,13 +69,33 @@ export default defineConfig({
 			locales,
 			sidebar: [
 				{
-					label: 'Visual Effects', //not translated
+					label: 'Guides', //not translated
 					translations: {
 						de: 'Anleitungen',
 						es: 'Guías',
 						ja: 'ガイド',
 						fr: 'Guides',
 						it: 'Guide',
+						id: 'Panduan',
+						'zh-CN': '指南',
+						'pt-BR': 'Guias',
+						'pt-PT': 'Guias',
+						ko: '가이드',
+						tr: 'Rehber',
+						ru: 'Руководства',
+						hi: 'गाइड',
+						uk: 'Ґайди',
+					},
+					autogenerate: { directory: 'guides' },
+				},
+				{
+					label: 'Visual Effects', //not translated
+					translations: {
+						de: 'Anleitungen',
+						es: 'Guías',
+						ja: 'ガイド',
+						fr: 'effets visuels',
+						it: 'effetti visivi',
 						id: 'Panduan',
 						'zh-CN': '指南',
 						'pt-BR': 'Guias',
