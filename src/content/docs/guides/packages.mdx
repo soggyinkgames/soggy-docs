@@ -366,3 +366,90 @@ All packages should start off looking something like this, give or take applicab
 />
 
 
+## versioning
+three steps then test versioning with commit mesage
+
+1. a folder called `.github`
+2. in there add a folder called `workflows`
+3. in that folder add a `.yml` file and name it `release`
+
+    ```yml
+        name: CI
+        on:
+            push:
+                branches:
+                - main
+        jobs:
+            release:
+                name: release
+                runs-on: ubuntu-latest
+                steps:
+                - uses: actions/checkout@v3
+                with:
+                    fetch-depth: 0
+                - name: Release
+                uses: cycjimmy/semantic-release-action@v3
+                with:
+                    extra_plugins: |
+                        @semantic-release/changelog
+                        @semantic-release/git
+                    branch: main
+                env:
+                    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    ```
+
+>remember to always preface commits with ...
+
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-left text-gray-500">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-300">
+              <tr class="bg-white border-b">
+                  <th scope="col" class="px-6 py-3">
+                      Commit message
+                  </th>
+                  <th scope="col" class="px-6 py-3">
+                       Release type
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr >
+                  <th scope="row" class="px-6 py-4 ">
+                    fix(MyAwesmeBranch): stop graphite breaking when too much pressure applied 
+                  </th>
+                  <td class="px-6 py-4">
+                    (Patch) Fix Release
+                  </td>
+              </tr>
+              <tr >
+                  <th scope="row" class="px-6 py-4  text-gray-700 ">
+                    feat(MyAwesmeBranch): add graphiteWidth option
+                  </th>
+                  <td class="px-6 py-4">
+                    (Minor) Feature Release 
+                  </td>
+              </tr>
+              <tr >
+                  <th scope="row" class="px-6 py-4  text-gray-700 whitespace-nowrap">
+                    perf(MyAwesmeBranch): remove graphiteWidth option
+                  </th>
+                  <td class="px-6 py-4">
+                    
+                  </td>
+              </tr>
+              <tr >
+                  <th scope="row" class="px-6 py-4  text-gray-700 whitespace-nowrap">
+                    BREAKING CHANGE: The graphiteWidth option has been removed. The default graphite width of 10mm is always used for performance reasons.
+                  </th>
+                  <td class="px-6 py-4">
+                    (Major) Breaking Release (Note that the BREAKING CHANGE:  token must be in the footer of the commit)
+                  </td>
+              </tr>
+
+
+          </tbody>
+      </table>
+    </div>
+
+
+> Once you've pushed a branch to main with the required prefix, go to github repository under `Actions` and test the build and automated versioning worked as expected
