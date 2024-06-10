@@ -367,7 +367,7 @@ All packages should start off looking something like this, give or take applicab
 
 
 ## versioning
-three steps then test versioning with commit mesage
+four steps then test versioning with commit mesage
 
 1. a folder called `.github`
 2. in there add a folder called `workflows`
@@ -397,6 +397,47 @@ three steps then test versioning with commit mesage
                 env:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     ```
+
+4. add a file in the rot of the project called `.releaserc.json` 
+
+    ```json
+    {
+        "tagFormat": "v${version}",
+        "plugins": [
+            [
+                "@semantic-release/commit-analyzer",
+                {
+                    "preset": "angular"
+                }
+            ],
+            "@semantic-release/release-notes-generator",
+            [
+                "@semantic-release/changelog",
+                {
+                    "preset": "angular"
+                }
+            ],
+            [
+                "@semantic-release/npm",
+                {
+                    "npmPublish": false
+                }
+            ],
+            [
+                "@semantic-release/git",
+                {
+                    "assets": [
+                        "package.json",
+                        "CHANGELOG.md"
+                    ],
+                    "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+                }
+            ],
+            "@semantic-release/github"
+        ]
+    }
+    ```
+
 
 >remember to always preface commits with ...
 
