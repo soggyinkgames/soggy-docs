@@ -108,6 +108,26 @@ export default defineConfig({
 					},
 					autogenerate: { directory: 'visualeffects' },
 				},
+				{
+					label: 'Terrain', //not translated
+					translations: {
+						de: 'Gelände',
+						es: 'Terreno',
+						ja: '地形 (chikei)',
+						fr: 'terrain',
+						it: 'terreno',
+						id: 'Medan',
+						'zh-CN': '地形 (dìxíng)',
+						'pt-BR': 'Terreno',
+						'pt-PT': 'Terreno',
+						ko: '지형 (jihyeong)',
+						tr: 'Arazi',
+						ru: 'Рельеф (relef)',
+						hi: 'भूगोल (bhugol)',
+						uk: 'Рельєф (reliehf)',
+					},
+					autogenerate: { directory: 'terrain' },
+				},
 				// { //HIDDEN TEMPLATE STARTER DOCUMENTATION--------------------------------------------VVV
 				// 	label: 'Start Here',
 				// 	translations: {
