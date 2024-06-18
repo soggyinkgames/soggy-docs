@@ -1,0 +1,71 @@
+---
+title: Package Terrain Assets
+description: package terrain assets to soggyterrain unsing soggy builder
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 5
+---
+
+import { FileTree } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+
+
+
+When packaging assets in the appropiate builder couple of things to note
+
+### package terrain assets
+
+1. you'll want to include a few things in your terain package including 
+
+    * a `terrain prefab`
+    * a png of the `heightmap` used
+    * the `terrain data` asset from the prefab (not a copy of it)
+    * a `Layer Palette` scriptable object asset with 
+    * each `layer` asset pointing to the 
+    * `texture` png files
+
+2. the file tree should look like this:
+
+    <FileTree>
+
+    - Documentation/ .md file linking to this docs
+    - Editor/ all editor related scripts
+    - Runtime/ all assets and non editor scripts 
+        - MyAwesomeScripts.cs
+      - **SoggyScenes** 
+          - SampleSoggyScene.unity
+      - **SoggyTerrains** 
+          - LayerPalettes/
+              - MyLayerPalette.asset *layer palette
+              - layer1.terrainlayer  *layer
+              - layer2.terrainlayer  *layer
+          - Uluru             THE PURPOSE OF THE PACKAGE   
+              - HeightMap_Uluru_10_857.png  *heightmap
+              - Terrain_Uluru.prefab  *terrain prefab
+              - Terrain_Uluru.asset   *terrain data
+              - …
+          - …
+      - **SoggyTextures/** textures used by layers
+      - com.soggyinkgames.package-soggyterrains.asmdef
+    - …
+    - Samples~/ the `~` line makes the folder invisible in unity
+        - SampleSoggyScene/ add a scene showing assets
+            - SampleSoggyScene.unity
+    - package.json
+    - CHANGELOG.md
+    - .gitattributes
+    - .gitignore
+    - LICENCE.md
+    - README.md
+
+    </FileTree>
+
+3. after creating your terrain from heightmaps, turn it into a prefab by dragging the terrain game object inside the terrain group `not the parent grouping game object` into your created folder and rename accordingly eg Uluru/`Terrain_Uluru`.prefab
+
+4. open the prefab and add a `Layer Palette` and make sure each of the layers created go in your folder ^^ see above and that each of those layers when opened are pointing to the textures in your `Textures` folder, then press `SAVE` in the inspector
+
+5. add prefabs to your scene and save scene under samples folder and in another folder under runtime.
+
+    <Aside type="note"> 
+     if an asset does not carry the textures across, double check you saved them all in the prefab not just in the game object in the scene
+    </Aside>
