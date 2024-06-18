@@ -1,0 +1,36 @@
+---
+title: Heightmap Build
+description: build terrain from heightmaps in unity
+tableOfContents:
+  minHeadingLevel: 2
+  maxHeadingLevel: 5
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+
+### Create a terrain
+
+1. go to `Window/Terrain/Terain Toolbox` in unity
+2. scroll to the `Import Heightmap` dropdown and select it.
+3. get yourself a heightmap - go to `https://heightmap.skydark.pl/` add the location you want a heightmap of, via name or latitude and longitude 
+4. adjust settings to get desired result and note the max height in m and the map size in km.
+5. on the website press the `Download PNG Heightmap` icon and rename with preface `Heightmap_[LocationName]_[TerrainWidth]_[MaxHeight]` 
+eg `Heightmap_MtFuji_60_3755`
+
+    <Card title="heightmap of Uluru" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1718708543/heightmap_uluru_10_8755_ptsjui.png" alt="heightmap of Uluru" align="left" width="100%" height="100"/>
+    </Card>
+
+6. back in unity, create a Terrain folder with another folder inside named after the location of heightmap eg. `Terrain/Geirangerfjord` and place the png in it
+7. in the terrain toolbox under `Select Texture` add the heightmap
+8. adjust total terrain width and length settings to match your heightmap as well as terrain height, and `Heightmap Resolution` to match image quality under `Group Settings`
+9. push `Create`
+
+
+
+    <Card title="Uluru Terrain" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1718713853/Uluru2_oxmbdt.png" alt="Uluru Terrain" align="left" width="100%" height="100"/>
+    </Card>
+
+
