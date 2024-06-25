@@ -89,6 +89,26 @@ export default defineConfig({
 					autogenerate: { directory: 'guides' },
 				},
 				{
+					label: 'Nomenclature', //not translated
+					translations: {
+						de: 'Nomenklatur',
+						es: 'Nomenclatura',
+						ja: '命名法 (meimei-hō)',
+						fr: 'Nomenclature',
+						it: 'Nomenclatura',
+						id: 'Nomenklatur',
+						'zh-CN': '命名法 (mìngmíng fǎ)',
+						'pt-BR': 'Nomenclatura',
+						'pt-PT': 'Nomenclatura',
+						ko: '명명법 (myeongmyeongbeop)',
+						tr: 'Adlandırma',
+						ru: 'Номенклатура',
+						hi: 'नामकरण (nāmakaraṇ)',
+						uk: 'Номенклатура (nomenklatura)'
+					},
+					autogenerate: { directory: 'nomenclature' },
+				},
+				{
 					label: 'Visual Effects', //not translated
 					translations: {
 						de: 'Visuelle Effekte',
