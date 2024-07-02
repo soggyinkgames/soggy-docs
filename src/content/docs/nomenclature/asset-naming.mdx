@@ -106,7 +106,8 @@ When naming an asset use these tables to determine the prefix and suffix to use 
 | Level (Lighting)        |            | _Lighting  |                                  |
 | Level (Geometry)        |            | _Geo       |                                  |
 | Level (Gameplay)        |            | _Gameplay  |                                  |
-| Prefab                  |        |            |                                  |
+| Prefab                  |            | _Pre       |                                  |
+| Model                   |            | _Mod       |                                  |
 | Material                | M_         |            |                                  |
 | Static Mesh             | SM_       |            |                                  |
 | Skeletal Mesh           | SK_       |            |                                  |
@@ -122,11 +123,10 @@ When naming an asset use these tables to determine the prefix and suffix to use 
 
 #### 1.2.1a 3D Models (FBX Files)
 
-PascalCase
-
 | Asset Type    | Prefix | Suffix | Notes |
 | ------------- | ------ | ------ | ----- |
 | Characters    | CH_    | _Mod   |       |
+| Structures    | STR_   | _Mod   | this includes buildings and parts of buildings |
 | Furniture     | FU_    | _Mod   |       |
 | Interior      | IN_    | _Mod   |       |
 | Icons         | IC_    | _Mod   |       |
@@ -145,6 +145,23 @@ All meshes in 3ds Max are lowercase to differentiate them from their FBX export.
 | Mesh          |        | _mesh_lod0* | Only use LOD suffix if model uses LOD's |
 | Mesh Collider |        | _collider   |                                         |
 
+
+<a name="anc-prefabs"></a>
+
+#### 1.2.1c 3D Prefabs
+
+| Asset Type    | Prefix | Suffix | Notes |
+| ------------- | ------ | ------ | ----- |
+| Characters    | CH_    | _Pre   |       |
+| Structures    | STR_   | _Pre   | this includes buildings and parts of buildings |
+| Furniture     | FU_    | _Pre   |       |
+| Interior      | IN_    | _Pre   |       |
+| Icons         | IC_    | _Pre   |       |
+| Weapons       | WP_    | _Pre   |       |
+| Static Mesh   | SM_    | _Pre   |       |
+| Skeletal Mesh | SK_    | _Pre   |       |
+| Skeleton      | SKEL_  | _Pre   |       |
+| Rig           | RIG_   | _Pre   |       |
 
 <a name="anc-animations"></a>
 
@@ -180,7 +197,7 @@ All meshes in 3ds Max are lowercase to differentiate them from their FBX export.
 
 | Asset Type              | Prefix     | Suffix     | Notes                            |
 | ----------------------- | ---------- | ---------- | -------------------------------- |
-| Prefab         |        |            |                                  |
+| Prefab                  |            |       _Pre |                                  |
 | Prefab Instance         | I       |            |                                  |
 | Scriptable Object       |     |        | Assigned "Blueprint" label in Editor |
 
@@ -236,10 +253,11 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | Asset Type              | Prefix     | Suffix     | Notes                            |
 | ----------------------- | ---------- | ---------- | -------------------------------- |
 | Signed Distance Field   | SDF_       |            |                                  |
+| SDF (Alphabet)          | SDF_       | _A         |                                  |
 | SDF (Elements)          | SDF_       | _E         |                                  |
 | SDF (Icons)             | SDF_       | _I         |                                  |
+| SDF (Structures)        | SDF_       | _STR       | this includes buildings and parts of buildings |
 | SDF (Interior)          | SDF_       | _IN        |                                  |
-| SDF (Alphabet)          | SDF_       | _A         |                                  |
 | SDF (Furniture)         | SDF_       | _F         |                                  |
 
 
@@ -252,6 +270,7 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | Shader (VFX)            | SH_        | _VFX       |                                  |
 | Shader (Elements)       | SH_        | _E         |                                  |
 | Shader (Icons)          | SH_        | _I         |                                  |
+| Shader (Structures)     | SDF_       | _STR       | this includes buildings and parts of buildings |
 | Shader (Interior)       | Sh_        | _IN        |                                  |
 | Shader (Alphabet)       | SH_        | _A         |                                  |
 | Shader (Furniture)      | SH_        | _F         |                                  |
@@ -267,6 +286,7 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | Shader Graphs (VFX)       | SHG_       | _VFX       |                                  |
 | Shader Graphs (Elements)  | SHG_       | _E         |                                  |
 | Shader Graphs (Icons)     | SHG_       | _I         |                                  |
+| Shader Graphs (Structures)| SDF_       | _STR       | this includes buildings and parts of buildings |
 | Shader Graphs (Interior)  | SHG_       | _IN        |                                  |
 | Shader Graphs (Alphabet)  | SHG_       | _A         |                                  |
 | Shader Graphs (Furniture) | SHG_       | _F         |                                  |
@@ -319,8 +339,8 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 <a name="anc-effects"></a>
 
 #### 1.2.14 Effects
-| Asset Type              | Prefix | Suffix | Notes |
-| ----------------------- | ------ | ------ | ----- |
+| Asset Type                 | Prefix | Suffix | Notes |
+| -------------------------- | ------ | ------ | ----- |
 | Particle System            | PS_     |        |       |
 | Particle System (Elements) | PS_     | _E     |       |
 | Particle System (Icons)    | PS_     | _I     |       |
@@ -341,7 +361,7 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 
 | Asset Type                      | Prefix | Suffix | Notes |
 | ------------------------------- | ------ | ------ | ----- |
-| Terrain Prefab                  | TP_    |        |       |
+| Terrain Prefab                  | TP_    |   _Pre |       |
 | Heightmap                       | THM_   |        |       |
 | Terrain Data                    | TD_    |        |       |
 | Layer Palette                   | TLaP_  |        |       |
