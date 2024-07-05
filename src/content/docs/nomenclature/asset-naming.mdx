@@ -246,6 +246,16 @@ It is common practice to pack multiple layers of texture data into one texture. 
 Packing 4 channels of data into a texture (RGBA) is not recommended except for an Alpha/Opacity mask in the Diffuse/Albedo's alpha channel as a texture with an alpha channel incurs more overhead than one without.
 
 
+<a name="anc-sky"></a>
+
+#### 1.2.6.2 Skybox
+
+| Asset Type              | Prefix     | Suffix     | Notes                            |
+| ----------------------- | ---------- | ---------- | -------------------------------- |
+| Skybox/Cubemap          | SKY_       | _Material  | Check material is pointing to Cubemap noted in image                                 |
+| Cubemap Import Settings | SKY_       | _Cubemap   | The cubemap (HDR) holds the skybox material |
+| Reflection Probes       | SKY_       | _RP        |                                  |
+
 <a name="anc-sdf"></a>
 
 #### 1.2.7 Signed Distance Fields
@@ -267,6 +277,7 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 
 | Asset Type              | Prefix     | Suffix     | Notes                            |
 | ----------------------- | ---------- | ---------- | -------------------------------- |
+| Shader (Skybox/Cubemap) | SKY_       | _Material  |                                  |
 | Shader (VFX)            | SH_        | _VFX       |                                  |
 | Shader (Elements)       | SH_        | _E         |                                  |
 | Shader (Icons)          | SH_        | _I         |                                  |
@@ -284,6 +295,7 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | Asset Type              | Prefix     | Suffix     | Notes                            |
 | ----------------------- | ---------- | ---------- | -------------------------------- |
 | Shader Graphs (VFX)       | SHG_       | _VFX       |                                  |
+| Shader Graphs(Skybox/Cubemap)| SKY_    | _SHG  |                                  |
 | Shader Graphs (Elements)  | SHG_       | _E         |                                  |
 | Shader Graphs (Icons)     | SHG_       | _I         |                                  |
 | Shader Graphs (Structures)| SDF_       | _STR       | this includes buildings and parts of buildings |
@@ -302,8 +314,8 @@ Packing 4 channels of data into a texture (RGBA) is not recommended except for a
 | Universal Render Pipeline Asset | URP_   |        |       |
 | Post Process Volume Profile     | PP_    |        |       |
 | User Interface                  | UI_    |        |       |
-| Lighting Setings Asset          | LI_    |        |       |
-| Texture Import Setings          | TI_    |        |       |
+| Lighting Settings Asset          | LI_    |        |       |
+| Texture Import Settings          | TI_    |        |       |
 
 
 <a name="anc-physics"></a>
