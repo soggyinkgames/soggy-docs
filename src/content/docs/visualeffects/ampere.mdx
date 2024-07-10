@@ -1,0 +1,79 @@
+---
+title: AMPERE
+description: meet ampere
+tableOfContents:
+    minHeadingLevel: 2
+    maxHeadingLevel: 5
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+
+
+{/* vfx description */}
+Inspired by André-Marie Ampère, the first scientist to attempt to theoretically explain and mathematically describe electricity and magnetism. These are glowing electric particles come together in any desired shape (sdf) and the color shifts magnetically as the user moves around it changing their viewing position in real time.
+
+{/* vfx image */}
+<Card title="AMPERE">
+  <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720602108/VFX/ampere1_cjbfan.png" alt="" align="left" width="100%" height="100"/>
+</Card>
+
+{/*inventor image*/}
+<CardGrid>
+    <Card title="Inspired by" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720177370/INVENTORS/Ampere_portrait.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+{/* inventor story*/}
+    <Card title="Ampere" icon="rocket">
+    Although he was not the first person to observe a connection between electricity and magnetism, André-Marie Ampère was the first scientist to attempt to theoretically explain and mathematically describe the phenomenon. His contributions laid the groundwork upon which the science of electrodynamics (a term coined by Ampère, but now more commonly referred to as electromagnetics) has been built.
+    >electromagnetics theory
+    </Card>
+</CardGrid>
+
+{/* folder structure*/}
+#### file tree 
+
+<FileTree>
+
+- Documentation/
+- Editor/
+- Runtime
+  - VisualEffects
+    - AMPERE               .meta files not shown in documentation 
+      - **AMPERE.vfx**
+      - AMPERE.prefab
+      - AMPEREchairSDF.asset signed distance field example
+    - …
+  - …
+- Samples~/
+- package.json
+- CHANGELOG.md
+- LICENCE.md
+- README.md
+
+</FileTree>
+
+{/* prefab instructions */}
+<Aside type="note"> 
+  Make sure to take a copy of all files in the AMPERE folder, prefab is pointing to both files within the folder and `.vfx` file is pointing to the signed distance field `.asset`  within folder.
+</Aside>
+
+
+{/* add video or gif of vfx */}
+
+{/* image preview of visual effect graph */}
+#### visual graph preview
+![An illustration of planets and stars featuring the word “astro”](https://res.cloudinary.com/soggy-ink-games/image/upload/v1720603433/VFX/soggyinkgames-ampere-visualgraph_oflixb.png)
+
+{/* table of associated components such as, assembly references, png's, exposed variables, scripts, shader graphs, shaders */}
+#### exposed variables
+
+
+| Name          | Description  | Type   | User controlled |
+| ------------- | ------------ | ------ | --------------- |
+| shape    | change the 3d object shape by changing the sdf    | signed distance field  | no      |
+| color blend     | shift the position at wich the color blends            | float   |  no     |
+
+{/* add tags */}
