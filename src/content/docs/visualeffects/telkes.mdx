@@ -1,0 +1,82 @@
+---
+title: TELKES
+description: meet telkes
+tableOfContents:
+    minHeadingLevel: 2
+    maxHeadingLevel: 5
+---
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+
+
+{/* vfx description */}
+Inspired by Maria Telkes a biophysicist and inventor, also knows as `The sun queen` who's work led to the development of a photoelectric device to measure brain waves. An imense collection of particles which move in waves from the centre expanding out, connected to the user's hand movements.
+
+{/* vfx image */}
+<Card title="TELKES">
+  <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720597973/VFX/telkes_hm3hub.png" alt="" align="left" width="100%" height="100"/>
+</Card>
+
+{/*inventor image*/}
+<CardGrid>
+    <Card title="Inspired by" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720177370/INVENTORS/Telkes_portrait.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+{/* inventor story*/}
+    <Card title="Telkes" icon="rocket">
+    Biophysicist and inventor, born in Hungary, Maria Telkes’ accomplished career in solar energy research and development earned her the nickname “the Sun Queen.” Telkes earned her B.A. and Ph.D. from the University of Budapest. She had just become an instructor there when a 1924 visit to the United States changed her life. She relocated to Ohio the next year, joining the Cleveland Clinic Foundation as a biophysicist. Her work there with George Washington Crile, a distinguished surgeon, led to the development of a photoelectric device to measure brain waves.
+    >photoelectric device to measure brain waves. "the Sun Queen"
+    </Card>
+</CardGrid>
+
+{/* folder structure*/}
+#### file tree 
+
+<FileTree>
+
+- Documentation/
+- Editor/
+- Runtime
+  - VisualEffects
+    - TELKES               .meta files not shown in documentation 
+      - **TELKES.vfx**
+      - TELKES.prefab
+    - …
+  - …
+- Samples~/
+- package.json
+- CHANGELOG.md
+- LICENCE.md
+- README.md
+
+</FileTree>
+
+{/* prefab instructions */}
+<Aside type="note"> 
+  Make sure to take a copy of all files in the TELKES folder, prefab is pointing to `.vfx` file within the folder.
+</Aside>
+
+
+{/* add video or gif of vfx */}
+
+{/* image preview of visual effect graph */}
+#### visual graph preview
+![An illustration of planets and stars featuring the word “astro”](https://res.cloudinary.com/soggy-ink-games/image/upload/v1720629002/VFX/telkes-visualgraph_rqtazx.png)
+
+{/* table of associated components such as, assembly references, png's, exposed variables, scripts, shader graphs, shaders */}
+#### exposed variables
+
+
+| Name          | Description  | Type   | User controlled |
+| ------------- | ------------ | ------ | --------------- |
+| left hand vfx    | changes shape of orb upon hand movement  | transform  | yes      |
+| right hand vfx    | changes shape of orb upon hand movement  | transform  | yes      |
+| drag   | changes drag speed of particles over time  | float  | no      |
+| intensity   | changes intensity via separation or coagulation of particles over time  | float  | no      |
+| radius   | changes radiud of overall particle collection over time  | float  | no      |
+
+{/* add tags */}
