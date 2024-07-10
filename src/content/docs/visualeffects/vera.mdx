@@ -1,0 +1,85 @@
+---
+title: VERA
+description: meet vera
+tableOfContents:
+    minHeadingLevel: 2
+    maxHeadingLevel: 5
+---
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+
+
+{/* vfx description */}
+Inspired by Vera Rubin, who's work showed that galaxies are rotating much faster than they should be, which led to the discovery of dark matter. A portal that explodes upon instantiation, centering a rotating swirl, in a circular glowing entrance as well as a intergalactic cone of linearly moving particles behind the swirl, that allow the user to feel immediately transported as they walk through it.
+
+{/* vfx image */}
+<Card title="VERA">
+  <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720599417/VFX/vera1_uxoi5c.png" alt="" align="left" width="100%" height="100"/>
+</Card>
+
+{/*inventor image*/}
+<CardGrid>
+    <Card title="Inspired by" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720177370/INVENTORS/Vera_portrait.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+{/* inventor story*/}
+    <Card title="Vera" icon="rocket">
+    Vera Rubin (1928-2016): Rubin was an astronomer who is best known for her work on the rotation curves of galaxies. Rubin's work showed that galaxies are rotating much faster than they should be, which led to the discovery of dark matter.
+>rotation curves of galaxies, dark matter
+    </Card>
+</CardGrid>
+
+{/* folder structure*/}
+#### file tree 
+
+<FileTree>
+
+- Documentation/
+- Editor/
+- Runtime
+  - VisualEffects
+    - VERA               .meta files not shown in documentation 
+      - **VERA.vfx**
+      - VERA.prefab
+      - Twirl.shadergraph 
+      - glowCircle.png
+      - glowingCircle.png
+    - …
+  - …
+- Samples~/
+- package.json
+- CHANGELOG.md
+- LICENCE.md
+- README.md
+
+</FileTree>
+
+{/* prefab instructions */}
+<Aside type="note"> 
+  Make sure to take a copy of all files in the VERA folder, prefab is pointing to all files within the folder and `.vfx` file is pointing to the `.png` and the `.shadergraph` files within folder.
+</Aside>
+
+
+{/* add video or gif of vfx */}
+
+{/* image preview of visual effect graph */}
+#### visual graph preview
+![An illustration of planets and stars featuring the word “astro”](https://res.cloudinary.com/soggy-ink-games/image/upload/v1720630990/VFX/vera-visualgraphTOP_m3xfot.png)
+
+![An illustration of planets and stars featuring the word “astro”](https://res.cloudinary.com/soggy-ink-games/image/upload/v1720631001/VFX/vera-visualgraphBOTTOM_tiwxwv.png)
+
+{/* table of associated components such as, assembly references, png's, exposed variables, scripts, shader graphs, shaders */}
+#### variables
+
+
+| Name          | Description  | Type   | Exposed |
+| ------------- | ------------ | ------ | --------------- |
+| particles color    | changes color of entire portal   | color  | yes      |
+| circle animation   | designates shape of portal  | texture 2D   |  no     |
+| shockwave     | designates shape of shockwave  | texture 2D   |  no     |
+
+{/* add tags */}
