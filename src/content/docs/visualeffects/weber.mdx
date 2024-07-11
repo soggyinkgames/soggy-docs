@@ -1,0 +1,108 @@
+---
+title: WEBER
+description: meet weber
+tableOfContents:
+    minHeadingLevel: 2
+    maxHeadingLevel: 5
+---
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+
+
+{/* vfx description */}
+Inspired by German physicist Wilhelm Weber, who developed and enhanced a variety of devices for sensitively detecting and measuring magnetic fields and electrical currents. This is another user controlled vfx orb displaying a glow and electric like strips expanding from the centre of the orb with pulsating waves of particles, all moving together as the user moves their hands to various transform positions.
+
+{/* vfx image */}
+<Card title="WEBER">
+  <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720597972/VFX/weber_zlfzmg.png" alt="" align="left" width="100%" height="100"/>
+</Card>
+
+{/*inventor image*/}
+<CardGrid>
+    <Card title="Inspired by" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720177371/INVENTORS/Weber_portrait.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+{/* inventor story*/}
+    <Card title="Weber" icon="rocket">
+    Researching magnetism with the great mathematician and astronomer Karl Friedrich Gauss in the 1830s, German physicist Wilhelm Weber developed and enhanced a variety of devices for sensitively detecting and measuring magnetic fields and electrical currents. Included among these devices was the electrodynamometer, which was capable of measuring electric current, voltage or power through the interaction of the magnetic fields of two coils. Utilizing this device, Weber experimentally validated André-Marie Ampère’s force law. Weber began developing a similar system of electric units around 1840 after Gauss developed a system of magnetic units expressed in terms of length, mass and time in the early 1830s.
+    >measuring magnetic fields and electrical currents, electrodynamometer
+    </Card>
+</CardGrid>
+
+{/* folder structure*/}
+#### file tree 
+
+<FileTree>
+
+- Documentation/
+- Editor/
+- Runtime
+  - VisualEffects
+    - WEBER               .meta files not shown in documentation 
+      - **WEBER.vfx**
+      - WEBER.prefab
+    - …
+  - …
+- Samples~/
+- package.json
+- CHANGELOG.md
+- LICENCE.md
+- README.md
+
+</FileTree>
+
+{/* prefab instructions */}
+<Aside type="note"> 
+  Make sure to take a copy of all files in the WEBER folder, prefab is pointing to `.vfx` file within the folder.
+</Aside>
+
+
+{/* add video or gif of vfx */}
+
+{/* image preview of visual effect graph */}
+#### visual graph preview
+![An illustration of planets and stars featuring the word “astro”](https://res.cloudinary.com/soggy-ink-games/image/upload/v1720691118/VFX/weber-trails-visualgraph_riseu9.png)
+
+![An illustration of planets and stars featuring the word “astro”](https://res.cloudinary.com/soggy-ink-games/image/upload/v1720691118/VFX/weber-beam-visualgraph_yvjfro.png)
+
+![An illustration of planets and stars featuring the word “astro”](https://res.cloudinary.com/soggy-ink-games/image/upload/v1720691118/VFX/weber-waves-visualgraph_upk5gd.png)
+
+{/* table of associated components such as, assembly references, png's, exposed variables, scripts, shader graphs, shaders */}
+#### exposed variables
+
+
+| Name          | Description  | Type   | User controlled |
+| ------------- | ------------ | ------ | --------------- |
+| color trails    | changes color of trailing lines    | color  | no      |
+| color beam    | changes color of glowing beam in the centre    | color  | no      |
+| trail spawn rate    | control the quantity of trails    | float  | no      |
+| size    | control the size of trails and waves  | float  | no      |
+| trails life time    | control length trails  | float  | no      |
+| spawn rate    | control the quantity of particles in the waves  | float  | no      |
+| left hand position    | control the size and shape of orb via its position relative to the other hand | transform  | yes      |
+| right hand position    | control the size and shape of orb via its position relative to the other hand | transform  | yes      |
+
+
+<CardGrid>
+    <Card title="weber variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720597966/VFX/weber3_bqy0rj.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+    <Card title="weber variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720691775/VFX/weber2_nxouin.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+    <Card title="weber variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720691769/VFX/weber1_nrxngl.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+    
+    <Card title="weber variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720691929/VFX/weber4_qeywd2.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+</CardGrid>
+
+{/* add tags */}
