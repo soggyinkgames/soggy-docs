@@ -1,0 +1,111 @@
+---
+title: WU
+description: meet wu
+tableOfContents:
+    minHeadingLevel: 2
+    maxHeadingLevel: 5
+---
+
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+
+
+{/* vfx description */}
+Inspired by Sau Lan Wu, an experimental physicist who contributed to the discovery of the Higgs Boson. Here we have glowing line particles that move in the designated shape of your chosen signed distance field (sdf). These are connected to the user's hands and as they move their hands through space the color of the visual effect changes. You can alternate the shapes asigned which will transition seemlesly from one to the next in line particle glowing animations.   
+
+{/* vfx image */}
+<Card title="WU">
+  <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720695017/VFX/wu-particles_fgjlfx.png" alt="" align="left" width="100%" height="100"/>
+</Card>
+
+{/*inventor image*/}
+<CardGrid>
+    <Card title="Inspired by" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720177370/INVENTORS/Wu_portrait.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+{/* inventor story*/}
+    <Card title="Wu" icon="rocket">
+    Sau Lan Wu (1940-present): Wu is a Chinese-American experimental physicist who has made notable contributions to the field of particle physics. She has been involved in experiments at CERN and contributed to the discovery of the Higgs boson.
+    >the Higgs boson
+    </Card>
+</CardGrid>
+
+{/* folder structure*/}
+#### file tree 
+
+<FileTree>
+
+- Documentation/
+- Editor/
+- Runtime
+  - VisualEffects
+    - WU               .meta files not shown in documentation 
+      - **WU.vfx**
+      - WU.prefab
+      - WUrocketSDF.asset signed distance field example
+    - …
+  - …
+- Samples~/
+- package.json
+- CHANGELOG.md
+- LICENCE.md
+- README.md
+
+</FileTree>
+
+{/* prefab instructions */}
+<Aside type="note"> 
+  Make sure to take a copy of all files in the WU folder, prefab is pointing to both files within the folder and `.vfx` file is pointing to the signed distance field `.asset`  within folder.
+</Aside>
+
+
+{/* add video or gif of vfx */}
+
+{/* image preview of visual effect graph */}
+#### visual graph preview
+![An illustration of planets and stars featuring the word “astro”](https://res.cloudinary.com/soggy-ink-games/image/upload/v1720695010/VFX/wu-visualgraph_f1p3et.png)
+
+{/* table of associated components such as, assembly references, png's, exposed variables, scripts, shader graphs, shaders */}
+#### exposed variables
+
+
+| Name          | Description  | Type   | User controlled |
+| ------------- | ------------ | ------ | --------------- |
+| left hand position    | changes color of visual effect in relation to the position of the other hand    | transform  | yes      |
+| right hand position    | changes color of visual effect in relation to the position of the other hand    | transform  | yes      |
+| intensity    | changes length of lines, making the effect seem brighter or more subdued    | float  | no      |
+| shape    | change the signed distance field creating the shape of the sdf, when these are alternated the vfx will transition between them in continuous animation  | texture3d   |  no     |
+
+
+#### wu again
+
+<CardGrid>
+    <Card title="wu variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720695014/VFX/wu-hydrogen_sncdhk.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+    <Card title="wu variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720695014/VFX/wu-flask_mhkwne.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+    <Card title="wu variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720695017/VFX/wu-book_jjkdd0.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+    
+    <Card title="wu variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720695010/VFX/wu-beaker_c5br3k.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+
+    <Card title="wu variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720695014/VFX/wu-rocket_vjhaki.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+    
+    <Card title="wu variations" icon="star">
+      <img src="https://res.cloudinary.com/soggy-ink-games/image/upload/v1720695013/VFX/wu-beakers_fe9xz2.png" alt="" align="left" width="100%" height="100"/>
+    </Card>
+</CardGrid>
+
+{/* add tags */}
