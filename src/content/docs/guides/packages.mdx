@@ -35,7 +35,7 @@ A package is not a builder, a package will contain a collection of assets and sc
 
 </FileTree>
 
-## create a package
+## STEP 1 create a package
 
 follow these steps    
 
@@ -319,12 +319,16 @@ follow these steps
     ```
 
 
-9. add to github
+9. add assembly definition file `.asmdef` in the `Runtime` folder, in the `Editor` folder and `Test` if included via the unity engine by right clicking in runtime folder >create>add assembly definition 
+    * Store Editor-specific code under a root editor assembly definition file:
+    `Editor/<company-name>.<package-name>.Editor.asmdef`
 
-    <Aside type="note"> 
-    all packages's names should be prefaced with `package` and have the work `soggy` in there
-    eg `package-soggybuttholes`
-    </Aside>
+    * Store runtime-specific code under a root runtime assembly definition file:
+    `Runtime/<company-name>.<package-name>.asmdef`
+
+    * Configure related test assemblies for your editor and runtime scripts:
+    `Tests/Editor/<company-name>.<package-name>.Editor.Tests.asmdef`
+    `Tests/Runtime/<company-name>.<package-name>.Tests.asmdef`
 
 
 </Steps>
@@ -339,7 +343,7 @@ All packages should start off looking something like this, give or take applicab
     - Documentation/ .md file linking to this docs
     - Editor/ all editor related scripts
     - Runtime/ all assets and non editor scripts 
-        - **MyAwesomeScripts.cs** THE PURPOSE OF THE PACKAGE
+        - **MyAwesomeScripts.cs** THE SCRIPTING PURPOSE OF PACKAGE
     - **MyAwesomeAssets** THE PURPOSE OF THE PACKAGE
         - AssetOne                
             - **AwesomeAsset.vfx**
@@ -359,6 +363,42 @@ All packages should start off looking something like this, give or take applicab
 
 </FileTree>
 
+## STEP 2 add to github
+
+    <Aside type="note"> 
+    all packages's names should be prefaced with `package` and have the work `soggy` in there
+    eg `package-soggybuttholes`
+    </Aside>
+
+<Steps>
+
+    1. stage all files in directory
+        ```bash
+        git add .
+        ```
+
+    2. check the status of files 
+        ```bash
+        git status
+        ```
+    3. create initial commit with message
+        ```bash
+        git commit -m "initial commit"
+
+        ```
+    4. create a github repository on github
+
+    5. push an existing repository from the command line
+        ```bash
+        git remote add origin `https://github.com/soggyinkgames/package-soggybuttholes.git`
+        ```
+    6. push comit to repository
+        ```bash
+        git push
+        ```
+
+</Steps>
+
 <LinkCard
     title="Unity docs"
     description="When in doubt go to unity docs and figure it out"
@@ -366,7 +406,7 @@ All packages should start off looking something like this, give or take applicab
 />
 
 
-## versioning
+## STEP 3 versioning
 four steps then test versioning with commit mesage
 
 1. a folder called `.github`
